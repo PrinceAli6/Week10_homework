@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 10 homework</title>
+
+      <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="js_embed.js"></script>
+
+  <!-- Import fonts that are to be used -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&family=Oswald:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style_me.css">
+</head>
+<body>
+
+    <h1> Week 10 data vis homework </h1>
+    
+    <div class="pure-g"> 
+        <div class="pure-u-1-2"> <div id = "chart" class = 'vis_container'></div> </div>
+        <div class="pure-u-1-2"> <p id = 'body_text'> The following is a scatter plot of the standardised Ladder score (a.k.a the happiness index)
+            plotted against the Log GDP per capita of nations. Appreciate that there is a clear linear trend that countries that are richer
+            per citizen also tend to be happier. There is a slider at the bottom that lets you then slide around and filter for the GDP per
+            capita of countries.
+        </p> </div>
+    </div>
+    
+    <div class="pure-g"> 
+        <div class="pure-u-1"> <div id = "chart2" class="vis_container"></div> </div>
+    </div>
+
+    <div class="pure-g"> 
+        <div class="pure-u-1" id="Ending_remarks"> <p> The above is the chart from the week 9 homework that I have attached as per the requirements of this
+            task (see instructions). 
+        </p> </div>
+    </div>
+</body>
+</html>

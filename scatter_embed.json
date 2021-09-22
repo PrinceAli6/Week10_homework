@@ -1,0 +1,41 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title" : "Standardised Happiness score against GDP",
+    "width": "container",
+    "data": {
+      "url": "https://raw.githubusercontent.com/PrinceAli6/Week9_homework_topo_json/main/scatter_plot_data.csv"
+    },
+    "transform": [{"filter":"GDP_slider <= datum['Logged GDP per capita']"}],
+    "params": [{"name":"GDP_slider", "value": 6.45, "bind": {"input": "range","min": 6.45,
+    "max": 11.0,"step":0.01,"name": "GDP Per capita slider"}
+    }
+    ],
+    "encoding": {
+      "x" : {"field":"Logged GDP per capita", "type": "quantitative",
+      "scale" : {
+        "domain" :[6.0,12.0]
+      }},
+      "y" : {"field": "Ladder score","type": "quantitative"},
+      "tooltip" : [{"field":"Country","type": "nominal"},
+        {"field": "Ladder score","type": "quantitative", "format": ".2f"}]
+    },
+    "layer": [
+      {"mark":"circle",
+      "encoding": {
+        "color": {"field" : "Regional indicator", "type": "nominal"}
+      }
+      },
+      {"mark" : {"type": "text","align" : "right","baseline": "middle",
+   "dx": -12,
+   "fontSize": 11.5,
+   "fontStyle": "italic"},
+   "encoding": {
+     "text" : {"field" : "Country", "type": "nominal"},
+     "color" : {"value" : "black"},
+     "opacity": {"condition" : {"test" : "datum['Country'] == 'Finland' || datum.Country == 'Australia' || datum.Country == 'Denmark' || datum.Country == 'Switzerland' || datum.Country == 'Iceland'  ",
+     "value" : 0.8}, "value" : 0
+     }
+   }
+   }
+    ]
+  }

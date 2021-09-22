@@ -1,0 +1,36 @@
+body{
+    background-color: white;
+}
+
+.pure-g{
+    background-color: white;
+    margin-left: 5cm;
+    margin-right: 5cm;
+}
+
+
+.pure-u-1{
+    margin-top: 2.5cm;
+}
+
+h1{
+    text-align: center;
+    margin-top: 1cm;
+    font-family: 'Oswald';
+    margin-bottom: 2.5cm;
+}
+
+.vis_container{
+    width: 100%;
+  }
+
+#Ending_remarks{
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+#body_text{
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
